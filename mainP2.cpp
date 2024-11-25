@@ -38,7 +38,7 @@ int main()
                 system("cls");
                 break;
             case 3:
-                Farmacia();
+                ejecutarFarmacia();
                 system("pause");
                 system("cls");
                 break;
