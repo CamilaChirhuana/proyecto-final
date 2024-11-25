@@ -148,7 +148,7 @@ void mostrarSuministros(){
 }
 
 void menuAtencionEmergencia(){
-    cout<<"\n------- Sistema de Atencion de Emergencias ------\n";
+    cout<<"\n------- Atencion de Emergencias ------\n";
     cout<<"1. Agregar paciente\n";
     cout<<"2. Administrar suministros\n";
     cout<<"3. Asignar suministro a paciente\n";
