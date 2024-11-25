@@ -3,31 +3,6 @@
 #include <string>
 #include "nutricion.h"
 
-Paciente* agregarPaciente(Paciente* cabeza) {
-    Paciente* nuevoPaciente = new Paciente;
-    std::cout << "Nombre del paciente: ";
-    std::getline(std::cin, nuevoPaciente->nombre);
-    std::cout << "Edad: ";
-    std::cin >> nuevoPaciente->edad;
-    std::cout << "Peso (kg): ";
-    std::cin >> nuevoPaciente->peso;
-    std::cout << "Talla (m): ";
-    std::cin >> nuevoPaciente->talla;
-    std::cout << "Condición médica (diabetes, hipertensión, anemia): ";
-    std::cin >> nuevoPaciente->condicion_medica;
-    std::cout << "¿Alergia a la lactosa? (1-Sí, 0-No): ";
-    std::cin >> nuevoPaciente->alergia_lactosa;
-    std::cout << "¿Alergia a nueces? (1-Sí, 0-No): ";
-    std::cin >> nuevoPaciente->alergia_nueces;
-    std::cout << "¿Alergia a mariscos? (1-Sí, 0-No): ";
-    std::cin >> nuevoPaciente->alergia_mariscos;
-
-    nuevoPaciente->siguiente = cabeza;
-    asignarDieta(nuevoPaciente);
-
-    return nuevoPaciente;
-}
-
 void asignarDieta(Paciente* paciente) {
     std::string dietaDiabetes[7] = {"Ensalada de verduras", "Pescado a la plancha", "Pollo a la parrilla", "Sopa de verduras", "Quinua con vegetales", "Pavo asado", "Salmón a la plancha"};
     std::string dietaHipertension[7] = {"Ensalada sin sal", "Pescado al vapor", "Pollo sin piel", "Verduras cocidas", "Arroz integral", "Pavo sin sal", "Frutas frescas"};
