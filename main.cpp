@@ -1,28 +1,25 @@
+#include "Farmacia.h"
 #include "FuncionesInventario.h"
 #include <iostream>
-#include <limits> // Agregado para usar std::numeric_limits
+#include <limits>
 
-void mostrarMenu() {
-    std::cout << "\n--- Inventario de Farmacia ---\n";
-    std::cout << "1. Agregar Medicamento\n";
-    std::cout << "2. Actualizar Cantidad\n";
-    std::cout << "3. Mostrar Inventario\n";
-    std::cout << "4. Verificar Stock Bajo\n";
-    std::cout << "5. Generar Reporte\n";
-    std::cout << "6. Salir\n";
-    std::cout << "Seleccione una opcion: ";
-}
-
-int main() {
+void ejecutarFarmacia() { // 
     Inventario inventario;
     int opcion;
     do {
-        mostrarMenu();
+        std::cout << "\n--- Inventario de Farmacia ---\n";
+        std::cout << "1. Agregar Medicamento\n";
+        std::cout << "2. Actualizar Cantidad\n";
+        std::cout << "3. Mostrar Inventario\n";
+        std::cout << "4. Verificar Stock Bajo\n";
+        std::cout << "5. Generar Reporte\n";
+        std::cout << "6. Salir\n";
+        std::cout << "Seleccione una opción: ";
         std::cin >> opcion;
 
-        if (std::cin.fail()) { // Validar entrada no numérica
+        if (std::cin.fail()) {
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Limpiar buffer
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Entrada inválida. Intente de nuevo.\n";
             continue;
         }
@@ -35,8 +32,8 @@ int main() {
                 std::cout << "Ingrese ID del medicamento: ";
                 std::cin >> id;
                 std::cout << "Ingrese nombre del medicamento: ";
-                std::cin.ignore(); // Limpiar buffer
-                std::getline(std::cin, nombre); // Para leer nombres con espacios
+                std::cin.ignore();
+                std::getline(std::cin, nombre);
                 std::cout << "Ingrese cantidad: ";
                 std::cin >> cantidad;
                 inventario.agregarMedicamento(id, nombre, cantidad);
@@ -69,6 +66,5 @@ int main() {
                 break;
         }
     } while (opcion != 6);
-
-    return 0;
 }
+
