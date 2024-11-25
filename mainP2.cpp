@@ -2,6 +2,7 @@
 #include "Admi.h"
 #include "MenuAtencionEmergencia.h"
 #include "Nutricion.h"
+#include "Farmacia.h"
 using namespace std;
 
 int main()
@@ -37,6 +38,9 @@ int main()
                 system("cls");
                 break;
             case 3:
+                Farmacia();
+                system("pause");
+                system("cls");
                 break;
             case 4:
                 break;
