@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Admi.h"
+#include "MenuAtencionEmergencia.h"
 using namespace std;
 
 int main()
@@ -30,6 +31,9 @@ int main()
                 break;
             
             case 2:
+                MenuAtencionEmergencia();
+                system("pause");
+                system("cls");
                 break;
             case 3:
                 break;
