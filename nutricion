@@ -1,6 +1,7 @@
-#include "nutricion.h"
 #include <iostream>
 #include <fstream>
+#include <string>
+#include "nutricion.h"
 
 Paciente* agregarPaciente(Paciente* cabeza) {
     Paciente* nuevoPaciente = new Paciente;
@@ -39,7 +40,7 @@ void asignarDieta(Paciente* paciente) {
     } else if (paciente->condicion_medica == "anemia") {
         for (int i = 0; i < 7; i++) paciente->dieta[i] = dietaAnemia[i];
     }
-
+    
     for (int i = 0; i < 7; i++) {
         if (paciente->alergia_lactosa && paciente->dieta[i].find("leche") != std::string::npos) {
             paciente->dieta[i].replace(paciente->dieta[i].find("leche"), 5, "leche de almendras");
