@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Admi.h"
 #include "MenuAtencionEmergencia.h"
+#include "Nutricion.h"
 using namespace std;
 
 int main()
